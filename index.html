@@ -377,7 +377,7 @@ footer { background: var(--black); color: var(--white); padding: 64px 0 0; }
         <p class="label">I risultati parlano</p>
         <h2 class="section-heading">Case <span>Study</span></h2>
       </div>
-      <a href="#contatti" class="section-link-sm">Tutti i progetti →</a>
+      <a href="#contatti" class="section-link-sm">Parliamo del tuo progetto →</a>
     </div>
     <div class="cases-grid">
       <div class="case-card large">
@@ -385,7 +385,6 @@ footer { background: var(--black); color: var(--white); padding: 64px 0 0; }
           <p class="case-sector">Policy & Finance Digitale</p>
           <h3 class="case-title">Future Blend — Rome Policy Forum 2026</h3>
           <p class="case-desc">Progetto fondato da Polyhedra. Un ecosistema dedicato alla finanza digitale che ha riunito istituzioni, banche e fintech nella Sala della Lupa di Montecitorio per un confronto ad alto livello su stablecoin, euro digitale e tokenizzazione. In collaborazione con PwC Italia e Wirex. Patrocinato dal Parlamento Europeo.</p>
-          <a href="#contatti" class="case-link">Scopri il progetto →</a>
         </div>
         <div class="case-results">
           <div class="case-result-item">
@@ -406,19 +405,16 @@ footer { background: var(--black); color: var(--white); padding: 64px 0 0; }
         <p class="case-sector">Innovation & Global Trends</p>
         <h3 class="case-title">Forum on Innovation and Global Trends</h3>
         <p class="case-desc">Comunicazione e PR per un forum istituzionale di alto profilo su longevità, economia e futuro. Format innovativo a salotti tematici con initial commentators e discussione aperta. Presente il Ministro Giancarlo Giorgetti con contributi di visione strategica e istituzionale.</p>
-        <a href="#contatti" class="case-link">Scopri il progetto →</a>
       </div>
       <div class="case-card">
         <p class="case-sector">Finance & Crypto</p>
         <h3 class="case-title">Gemini</h3>
         <p class="case-desc">Media relations in Italia per uno dei principali crypto exchange globali. Cena istituzionale e posizionamento mediatico con 35 uscite Tier 1 su testate nazionali e di settore.</p>
-        <a href="#contatti" class="case-link">Scopri il progetto →</a>
       </div>
       <div class="case-card">
         <p class="case-sector">Finance & Crypto</p>
         <h3 class="case-title">Wirex</h3>
         <p class="case-desc">PR e contenuti strategici per uno dei player globali nel settore crypto e pagamenti digitali. Posizionamento mediatico e thought leadership nel mercato italiano.</p>
-        <a href="#contatti" class="case-link">Scopri il progetto →</a>
       </div>
     </div>
     <div class="case-extra">
@@ -427,7 +423,6 @@ footer { background: var(--black); color: var(--white); padding: 64px 0 0; }
         <h3 class="case-title" style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:12px;">Sandwich Club</h3>
         <p style="font-size:14px;color:var(--gray-text);line-height:1.75;max-width:560px;">Thought leadership, LinkedIn, articoli, ufficio stampa e podcast per una delle community di pensiero più attive in Italia. Finanza, geopolitica, innovazione e futuro, con eventi a Milano, Roma, Torino e Washington. Ogni voce del network posizionata come riferimento nel proprio settore.</p>
       </div>
-      <a href="#contatti" class="case-link">Scopri il progetto →</a>
     </div>
   </div>
 </section>
@@ -558,17 +553,21 @@ footer { background: var(--black); color: var(--white); padding: 64px 0 0; }
           <div class="contact-info-row"><strong>Instagram</strong><span>@polyhedra</span></div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="return false;">
+      <form class="contact-form" action="https://formsubmit.co/sara.noggler@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuova richiesta dal sito Polyhedra">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://polyhedra.info/grazie.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
-          <div class="form-field"><label>Nome</label><input type="text"></div>
-          <div class="form-field"><label>Azienda</label><input type="text"></div>
+          <div class="form-field"><label>Nome</label><input type="text" name="Nome" required></div>
+          <div class="form-field"><label>Azienda</label><input type="text" name="Azienda"></div>
         </div>
-        <div class="form-field"><label>Email</label><input type="email"></div>
+        <div class="form-field"><label>Email</label><input type="email" name="email" required></div>
         <div class="form-field">
           <label>Servizio di interesse</label>
-          <select><option value="" disabled selected></option><option>PR & Media Relations</option><option>Thought Leadership</option><option>Contenuti Strategici</option><option>Eventi & Progetti</option><option>Pacchetto completo</option></select>
+          <select name="Servizio"><option value="" disabled selected></option><option>PR & Media Relations</option><option>Thought Leadership</option><option>Contenuti Strategici</option><option>Eventi & Progetti</option><option>Pacchetto completo</option></select>
         </div>
-        <div class="form-field"><label>Raccontaci il progetto</label><textarea></textarea></div>
+        <div class="form-field"><label>Raccontaci il progetto</label><textarea name="Progetto" required></textarea></div>
         <button type="submit" class="form-submit">Invia la richiesta</button>
       </form>
     </div>
@@ -583,20 +582,20 @@ footer { background: var(--black); color: var(--white); padding: 64px 0 0; }
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Navigazione</p>
-      <ul><li><a href="#servizi">Servizi</a></li><li><a href="#settori">Settori</a></li><li><a href="#casi">Case Study</a></li><li><a href="#team">Chi siamo</a></li><li><a href="#contatti">Contatti</a></li></ul>
+      <ul><li><a href="#servizi">Servizi</a></li><li><a href="#articoli">Articoli</a></li><li><a href="#casi">Case Study</a></li><li><a href="#team">Chi siamo</a></li><li><a href="#contatti">Contatti</a></li></ul>
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Settori</p>
-      <ul><li><a href="#">Technology & AI</a></li><li><a href="#">Wellness & Longevity</a></li><li><a href="#">Finance & Crypto</a></li><li><a href="#">Policy & Institutional</a></li><li><a href="#">Startup & Scale-up</a></li></ul>
+      <ul><li><a href="#casi">Technology & AI</a></li><li><a href="#casi">Wellness & Longevity</a></li><li><a href="#casi">Finance & Crypto</a></li><li><a href="#casi">Policy & Institutional</a></li><li><a href="#casi">Startup & Scale-up</a></li></ul>
     </div>
     <div class="footer-col">
       <p class="footer-col-title">Servizi</p>
-      <ul><li><a href="#">PR & Media Relations</a></li><li><a href="#">Thought Leadership</a></li><li><a href="#">Contenuti Strategici</a></li><li><a href="#">Eventi & Progetti</a></li></ul>
+      <ul><li><a href="#servizi">PR & Media Relations</a></li><li><a href="#servizi">Thought Leadership</a></li><li><a href="#servizi">Contenuti Strategici</a></li><li><a href="#servizi">Eventi & Progetti</a></li></ul>
     </div>
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2026 Polyhedra. Tutti i diritti riservati.</p>
-    <div class="footer-social"><a href="#">LinkedIn</a><a href="#">Instagram</a></div>
+    <div class="footer-social"><a href="https://www.linkedin.com/company/polyhedra" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/polyhedra" target="_blank" rel="noopener">Instagram</a></div>
   </div>
 </footer>
 
