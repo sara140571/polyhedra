@@ -177,6 +177,11 @@ nav ul a:hover { color: var(--ink); }
 .event p { font-size: 15px; color: var(--muted); margin-top: 6px; }
 .events .more { margin-top: 48px; }
 
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 56px; }
+.gallery figure img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.gallery figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+@media (max-width: 900px) { .gallery { grid-template-columns: 1fr 1fr; gap: 14px; } }
+
 /* servizi */
 .services-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; }
 .service-list { list-style: none; border-top: 1px solid var(--line); }
@@ -365,6 +370,12 @@ footer a:hover { color: var(--paper); }
         <h3>Forum on Innovation and Global Trends</h3>
         <p>Salotti tematici sul futuro, con il Ministro Giancarlo Giorgetti.</p>
       </article>
+    </div>
+    <div class="gallery">
+      <figure><img src="foto-tavola-rotonda.jpg" alt="Tavola rotonda istituzionale organizzata da Polyhedra" loading="lazy"><figcaption>Tavole rotonde</figcaption></figure>
+      <figure><img src="foto-incontro-riservato.jpg" alt="Incontro riservato con manager e istituzioni" loading="lazy"><figcaption>Incontri riservati</figcaption></figure>
+      <figure><img src="foto-networking.jpg" alt="Networking tra ospiti di un evento Polyhedra" loading="lazy"><figcaption>Networking</figcaption></figure>
+      <figure><img src="foto-rebliss.jpg" alt="Una classe da Rebliss, cliente di Polyhedra" loading="lazy"><figcaption>Rebliss, benessere e longevity</figcaption></figure>
     </div>
     <div class="more"><a href="#contatti" class="btn">Organizza il tuo evento</a></div>
   </div>
