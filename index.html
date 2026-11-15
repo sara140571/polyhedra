@@ -75,7 +75,7 @@
    "@type": "FAQPage",
    "mainEntity": [
     { "@type": "Question", "name": "Cosa fa Polyhedra?", "acceptedAnswer": { "@type": "Answer", "text": "Polyhedra organizza eventi istituzionali, cura ufficio stampa, relazioni istituzionali e thought leadership su LinkedIn per aziende e vertici che innovano nella finanza digitale, nel fintech e nella longevity. Ha sede a Milano, in Via Emilio Visconti Venosta 3." } },
-    { "@type": "Question", "name": "Che eventi organizzate?", "acceptedAnswer": { "@type": "Answer", "text": "Forum, cene istituzionali, tavole rotonde e presentazioni di studi. Tra questi il Rome Policy Forum alla Camera dei Deputati e il New Money Forum di Milano. Seguiamo temi, relatori, inviti, location e racconto sui media." } },
+    { "@type": "Question", "name": "Che eventi organizzate?", "acceptedAnswer": { "@type": "Answer", "text": "Forum, cene istituzionali, tavole rotonde e presentazioni di studi, a Milano e a Roma. Seguiamo temi, relatori, inviti, location e racconto sui media." } },
     { "@type": "Question", "name": "Chi c'è dietro Polyhedra?", "acceptedAnswer": { "@type": "Answer", "text": "Polyhedra è stata fondata nel 2018 da Sara Noggler, LinkedIn Top Voice sulla finanza digitale. Lavora con una squadra di dieci professionisti tra media relations, contenuti, eventi e public affairs." } },
     { "@type": "Question", "name": "Seguite aziende internazionali?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Abbiamo accompagnato in Italia aziende come Gemini e Wirex, con ufficio stampa, eventi e relazioni istituzionali." } }
    ]
@@ -182,6 +182,13 @@ nav ul a:hover { color: var(--ink); }
 .gallery figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 @media (max-width: 900px) { .gallery { grid-template-columns: 1fr 1fr; gap: 14px; } }
 
+.mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 260px; gap: 16px; }
+.mosaic figure { position: relative; overflow: hidden; }
+.mosaic .m-big { grid-column: span 2; grid-row: span 2; }
+.mosaic img { width: 100%; height: 100%; object-fit: cover; }
+.mosaic figcaption { position: absolute; left: 0; bottom: 0; background: var(--accent); color: var(--ink); font-size: 13px; font-weight: 600; padding: 6px 10px; }
+@media (max-width: 900px) { .mosaic { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; gap: 10px; } }
+
 /* servizi */
 .services-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; }
 .service-list { list-style: none; border-top: 1px solid var(--line); }
@@ -279,7 +286,6 @@ footer a:hover { color: var(--paper); }
     <ul>
       <li><a href="#eventi">Eventi</a></li>
       <li><a href="#servizi">Servizi</a></li>
-      <li><a href="#lavori">Lavori</a></li>
       <li><a href="#fondatrice">Chi siamo</a></li>
     </ul>
     <div class="lang"><a href="index.html" class="on">IT</a> · <a href="en.html" hreflang="en">EN</a></div>
@@ -311,7 +317,7 @@ footer a:hover { color: var(--paper); }
     <div class="fact"><b>2018</b><span>anno di fondazione</span></div>
     <div class="fact"><b>10</b><span>professionisti</span></div>
     <div class="fact"><b>12</b><span>anni di comunicazione finanziaria</span></div>
-    <div class="fact"><b>35</b><span>uscite Tier 1 per Gemini</span></div>
+    <div class="fact"><b>100%</b><span>indipendenti</span></div>
   </div>
 </section>
 
@@ -345,37 +351,12 @@ footer a:hover { color: var(--paper); }
       </div>
       <p>Forum, cene riservate, presentazioni di studi. Scegliamo temi e relatori, portiamo in sala chi decide e raccontiamo l'evento sui media.</p>
     </div>
-    <div class="event-grid">
-      <article class="event big">
-        <div class="ph" data-label="Foto: New Money Forum"><img src="foto-new-money-forum.jpg" alt="New Money Forum allo Smart City Lab di Milano" loading="lazy" onerror="this.remove()"></div>
-        <p class="where">Smart City Lab, Milano · 29 ottobre 2026</p>
-        <h3>New Money Forum</h3>
-        <p>Stablecoin, MiCAR, euro digitale. Una sala piena di banche, fintech e istituzioni, a porte chiuse.</p>
-      </article>
-      <article class="event small">
-        <div class="ph" data-label="Foto: cena istituzionale Gemini"><img src="foto-gemini.jpg" alt="Cena istituzionale Gemini a Milano" loading="lazy" onerror="this.remove()"></div>
-        <p class="where">Milano</p>
-        <h3>Cena Gemini</h3>
-        <p>Il debutto italiano di un exchange globale.</p>
-      </article>
-      <article class="event">
-        <div class="ph" data-label="Foto: Rome Policy Forum, Sala della Lupa"><img src="foto-montecitorio.jpg" alt="Rome Policy Forum 2026 nella Sala della Lupa di Montecitorio" loading="lazy" onerror="this.remove()"></div>
-        <p class="where">Camera dei Deputati, Roma · 4 febbraio 2026</p>
-        <h3>Rome Policy Forum</h3>
-        <p>La finanza digitale nella Sala della Lupa, con il patrocinio del Parlamento Europeo.</p>
-      </article>
-      <article class="event">
-        <div class="ph" data-label="Foto: Forum on Innovation and Global Trends"><img src="foto-forum-longevity.jpg" alt="Forum on Innovation and Global Trends" loading="lazy" onerror="this.remove()"></div>
-        <p class="where">Longevity ed economia</p>
-        <h3>Forum on Innovation and Global Trends</h3>
-        <p>Salotti tematici sul futuro, con il Ministro Giancarlo Giorgetti.</p>
-      </article>
-    </div>
-    <div class="gallery">
-      <figure><img src="foto-tavola-rotonda.jpg" alt="Tavola rotonda istituzionale organizzata da Polyhedra" loading="lazy"><figcaption>Tavole rotonde</figcaption></figure>
+    <div class="mosaic">
+      <figure class="m-big"><img src="foto-new-money-forum.jpg" alt="Un forum istituzionale organizzato da Polyhedra a Milano" loading="lazy"><figcaption>Forum</figcaption></figure>
+      <figure><img src="foto-tavola-rotonda.jpg" alt="Tavola rotonda con relatori istituzionali" loading="lazy"><figcaption>Tavole rotonde</figcaption></figure>
+      <figure><img src="foto-lavoro-sandwich.jpg" alt="Accoglienza degli ospiti a un evento Polyhedra" loading="lazy"><figcaption>Accoglienza</figcaption></figure>
       <figure><img src="foto-incontro-riservato.jpg" alt="Incontro riservato con manager e istituzioni" loading="lazy"><figcaption>Incontri riservati</figcaption></figure>
-      <figure><img src="foto-networking.jpg" alt="Networking tra ospiti di un evento Polyhedra" loading="lazy"><figcaption>Networking</figcaption></figure>
-      <figure><img src="foto-rebliss.jpg" alt="Una classe da Rebliss, cliente di Polyhedra" loading="lazy"><figcaption>Rebliss, benessere e longevity</figcaption></figure>
+      <figure><img src="foto-networking.jpg" alt="Networking tra gli ospiti" loading="lazy"><figcaption>Networking</figcaption></figure>
     </div>
     <div class="more"><a href="#contatti" class="btn">Organizza il tuo evento</a></div>
   </div>
@@ -398,34 +379,6 @@ footer a:hover { color: var(--paper); }
   </div>
 </section>
 
-<section class="work" id="lavori">
-  <div class="wrap">
-    <p class="kicker">Lavori</p>
-    <h2>Alcuni progetti</h2>
-    <div class="work-grid">
-      <article class="work-item">
-        <div class="ph" data-label="Foto Gemini"><img src="foto-lavoro-gemini.jpg" alt="Gemini in Italia" loading="lazy" onerror="this.remove()"></div>
-        <h3>Gemini</h3>
-        <p>Ufficio stampa in Italia: 35 uscite Tier 1 e una cena istituzionale.</p>
-      </article>
-      <article class="work-item">
-        <div class="ph" data-label="Foto Wirex"><img src="foto-lavoro-wirex.jpg" alt="Wirex in Italia" loading="lazy" onerror="this.remove()"></div>
-        <h3>Wirex</h3>
-        <p>PR e contenuti per l'ingresso nel mercato italiano.</p>
-      </article>
-      <article class="work-item">
-        <div class="ph" data-label="Foto Sandwich Club"><img src="foto-lavoro-sandwich.jpg" alt="Accoglienza degli ospiti al New Money Forum, co-organizzato con il Sandwich Club" loading="lazy" onerror="this.remove()"></div>
-        <h3>Sandwich Club</h3>
-        <p>LinkedIn, ufficio stampa e podcast per un think tank tra Milano, Roma e Washington.</p>
-      </article>
-      <article class="work-item">
-        <div class="ph" data-label="Foto Future Blend"><img src="foto-lavoro-futureblend.jpg" alt="Il palco del New Money Forum di Future Blend" loading="lazy" onerror="this.remove()"></div>
-        <h3>Future Blend</h3>
-        <p>La piattaforma sulla finanza digitale fondata da Polyhedra.</p>
-      </article>
-    </div>
-  </div>
-</section>
 
 <section id="fondatrice">
   <div class="wrap founder-grid">
@@ -440,16 +393,6 @@ footer a:hover { color: var(--paper); }
   </div>
 </section>
 
-<section class="place" aria-label="La sede">
-  <div class="wrap place-grid">
-    <div class="ph" data-label="Foto: la sede"><img src="foto-sede.jpg" alt="La sede di Polyhedra in Via Emilio Visconti Venosta a Milano" loading="lazy" onerror="this.remove()"></div>
-    <div>
-      <p class="kicker">La sede</p>
-      <h3>Via Emilio Visconti Venosta 3, Milano</h3>
-      <p>A due passi dalla Rotonda della Besana. Vieni a trovarci.</p>
-    </div>
-  </div>
-</section>
 
 <section class="field" id="dal-campo">
   <div class="wrap">
@@ -459,7 +402,6 @@ footer a:hover { color: var(--paper); }
       <li><a href="https://www.primapaginanews.it/next/il-primo-bond-tokenizzato-in-italia-e-gia-realta-operativa-13830/" target="_blank" rel="noopener"><span>NEXT · Intervista</span><h3>Il primo bond tokenizzato in Italia è già realtà</h3><span>PPN</span></a></li>
       <li><a href="https://www.primapaginanews.it/next/lai-europea-comincia-in-miniera-14112/" target="_blank" rel="noopener"><span>NEXT · Analisi</span><h3>L'AI europea comincia in miniera</h3><span>PPN</span></a></li>
       <li><a href="https://www.primapaginanews.it/next/il-contante-resiste-il-digitale-corre-la-doppia-velocita-dei-pagamenti-secondo-la-bce-14354/" target="_blank" rel="noopener"><span>NEXT · Analisi</span><h3>Il contante resiste, il digitale corre</h3><span>PPN</span></a></li>
-      <li><a href="https://www.lamiafinanza.it/2026/02/future-blend-ha-riunito-istituzioni-banche-e-fintech-al-rome-policy-forum-2026/" target="_blank" rel="noopener"><span>Evento · Stampa</span><h3>Future Blend porta la finanza digitale a Montecitorio</h3><span>La Mia Finanza</span></a></li>
     </ul>
   </div>
 </section>
@@ -469,7 +411,7 @@ footer a:hover { color: var(--paper); }
     <p class="kicker">Domande</p>
     <h2>In breve</h2>
     <details><summary>Cosa fa Polyhedra?</summary><p>Organizza eventi istituzionali, cura ufficio stampa, relazioni istituzionali e LinkedIn per aziende e vertici che innovano nella finanza digitale, nel fintech e nella longevity. Ha sede a Milano, in Via Emilio Visconti Venosta 3.</p></details>
-    <details><summary>Che eventi organizzate?</summary><p>Forum, cene istituzionali, tavole rotonde e presentazioni di studi. Tra questi il Rome Policy Forum alla Camera dei Deputati e il New Money Forum di Milano. Seguiamo temi, relatori, inviti, location e racconto sui media.</p></details>
+    <details><summary>Che eventi organizzate?</summary><p>Forum, cene istituzionali, tavole rotonde e presentazioni di studi, a Milano e a Roma. Seguiamo temi, relatori, inviti, location e racconto sui media.</p></details>
     <details><summary>Chi c'è dietro Polyhedra?</summary><p>Sara Noggler, che l'ha fondata nel 2018, con una squadra di dieci professionisti tra media relations, contenuti, eventi e public affairs.</p></details>
     <details><summary>Seguite aziende internazionali?</summary><p>Sì. Abbiamo accompagnato in Italia aziende come Gemini e Wirex, con ufficio stampa, eventi e relazioni istituzionali.</p></details>
   </div>
