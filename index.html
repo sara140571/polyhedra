@@ -287,7 +287,7 @@ nav ul a:hover { color: var(--ink); }
 .hero { padding: 72px 0 88px; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 64px; align-items: end; }
 .hero h1 { font-size: clamp(46px, 6vw, 84px); letter-spacing: -.01em; margin: 18px 0 28px; }
-.hero h1 mark { display: inline-block; margin-top: 8px; padding: 0 .14em; }
+.hero h1 mark { padding: 0 .14em; -webkit-box-decoration-break: clone; box-decoration-break: clone; line-height: 1.25; }
 .hero p { font-size: 20px; color: var(--muted); max-width: 540px; margin-bottom: 36px; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .hero-photo { position: relative; }
